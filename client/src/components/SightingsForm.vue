@@ -40,7 +40,8 @@ export default {
 				date: this.date
 			}
 			SightingService.postSightings(sighting)
-			.then(res => eventBus.$emit('sighting-added', res))
+			.then(res => eventBus.$emit('sighting-added', res));
+			this.species = this.location = this.date = "";
 		}
 	}
 	
